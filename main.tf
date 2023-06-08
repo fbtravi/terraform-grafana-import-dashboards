@@ -10,7 +10,7 @@ resource "grafana_folder" "folder" {
   title    = var.grafana_folder
 }
 
-resource "grafana_dashboard" "dashboard-" {
+resource "grafana_dashboard" "dashboard" {
   for_each    = var.dashboards
   provider    = grafana.my_org
   org_id      = var.grafana_org_id
